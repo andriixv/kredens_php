@@ -5,7 +5,7 @@
 </head>
 <body>
     <?php include 'include-navbar.php';?>
-    <?php include 'include-calendar.php';?>
+    <!-- <?php include 'include-calendar.php';?> -->
     <main>
     <?php include 'include-sidebar.php';?>
     

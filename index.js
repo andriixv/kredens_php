@@ -14,14 +14,14 @@ if (isDarkMode) {
 
 darkbtn.addEventListener("click", () => {
   if (darkbtn.checked) {
-    icon.classList.replace("fa-moon", "fa-sun");
+    icon.innerHTML = 'brightness_5';
     document.body.classList.add("dark");
     cards.forEach((card) => {
       card.classList.add("dark");
     });
     localStorage.setItem("darkMode", "enabled");
   } else {
-    icon.classList.replace("fa-sun", "fa-moon");
+    icon.innerHTML = 'dark_mode';
     document.body.classList.remove("dark");
     cards.forEach((card) => {
       card.classList.remove("dark");
@@ -30,19 +30,16 @@ darkbtn.addEventListener("click", () => {
   }
 });
 
-//Бургер-меню стара реалізація
-// const burgerMenuBtn = document.getElementById("burger-menu");
-// const mainMenu = document.getElementById("main-menu");
-
-// burgerMenuBtn.addEventListener("click", () => {
-//   mainMenu.classList.toggle("open");
-// });
+//Пошук
+function search(){
+  document.body.classList.toggle('open')
+  document.getElementsByClassName('search-form')[0].classList.toggle('open')
+}
 
 //Бургер-меню
 function burgerMenu(){
-  const mainMenu = document.getElementById("main-menu");
-  mainMenu.classList.toggle("open");
-  document.body.classList.toggle('menu-open')
+  document.getElementById("main-menu").classList.toggle("open");
+  document.body.classList.toggle('open')
 }
 
 //Календар
