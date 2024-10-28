@@ -34,6 +34,35 @@
   --rojo: #dd1c1aff;
 }
 
+/*Загальні класи*/
+.card {
+  /* max-width: 300px; */
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--whitesmoke);
+  transition: 0.5s;
+}
+
+.card.dark {
+  background-color: var(--prussian-blue);
+}
+
+.btn {
+  padding: 5px 10px;
+  background: var(--jonquil);
+  border-radius: 5px;
+  border: none;
+}
+.btn:hover{
+  background: var(--silver-lake-blue);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
 body {
   background-color: var(--eggshell);
   color: var(--rich-black);
@@ -46,10 +75,15 @@ body.dark {
   background-color: var(--body-dark);
   color: var(--eggshell);
 }
- body.menu-open{
-  overflow: hidden;
- }
 
+ main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+ }
+ main .container{
+  width: 100%;
+ }
 img {
   width: 100%;
 }
@@ -82,23 +116,51 @@ nav .container {
   margin: 0 auto;
   padding: 0 10px;
 }
-
-nav .main-menu ul {
+.modal-form{
+  display: none;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0088cc6f;
+}
+.main-menu{
+  background-color: var(--jonquil);
+  width: 80px;
+  transition: .5s;
+  /* display: none; */
+}
+.main-menu.open{
+  width:350px;
+}
+.main-menu ul {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: right;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: space-evenly; */
 }
 
-nav li {
+.main-menu li {
   display: block;
   margin: 0 20px;
   padding: 5px 10px;
   border-radius: 15px;
+  font-size: 1.5rem;
 }
 
-nav .main-menu li:hover {
+.main-menu li:hover {
   background-color: #d3d3d37e;
+}
+
+.link-name{
+  display: none;
+}
+.main-menu.open .link-name{
+  transition: .7s;
+  display: inline;
 }
 
 .darkmode input {
@@ -113,75 +175,6 @@ nav .main-menu li:hover {
   cursor: pointer;
 }
 
-nav .burger-menu {
-  visibility: collapse;
-}
-nav .close-menu{
-  display: none;
-}
-@media (max-width: 1150px) {
-  .link-name{
-    display: none;
-  }
-}
-@media (max-width: 760px) {
-  nav .close-menu{
-    display: block;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    font-size: 2rem;
-    color: var(--rich-black);
-    width: 30px;
-    height: 30px;
-  }
-  .nav {
-    z-index: 2;
-    padding: 0;
-  }
-  .link-name{
-    display:contents;
-  }
-  nav .main-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    line-height: 2;
-  }
-
-  nav .main-menu {
-    visibility: collapse;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0088cc;
-    font-size: .2rem;
-    z-index: -1;
-    right: 0;
-    top: 0;
-    width: 0%;
-    height: 0%;
-  }
-
-  nav .main-menu.open {
-    z-index: 2;
-    visibility: visible;
-    position: fixed;
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
-    font-size: 2rem;
-  }
-
-  nav .burger-menu{
-    visibility: visible;
-    font-size: 2rem;
-    color: var(--rich-black);
-    width: 30px;
-    height: 30px;
-  }
-}
 
 /*Стрічка анонсів подій*/
 .announcements-wraper {
@@ -452,37 +445,6 @@ footer .contacts a:hover {
   max-width: 90%;
   text-align: justify;
 }
-
-
-/*Загальні*/
-.card {
-  /* max-width: 300px; */
-  border-radius: 5px;
-  padding: 10px;
-  background-color: var(--whitesmoke);
-  transition: 0.5s;
-}
-
-.card.dark {
-  background-color: var(--prussian-blue);
-}
-
-.btn {
-  padding: 5px 10px;
-  background: var(--jonquil);
-  border-radius: 5px;
-  border: none;
-}
-.btn:hover{
-  background: var(--silver-lake-blue);
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 15px;
-}
-
 
 /*Вид смартфон*/
 @media (max-width: 1024px) {
@@ -870,6 +832,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 10px;
 }
 .book-info .btn{
   max-width: 200px;
@@ -890,7 +853,8 @@ textarea {
     
   }
   .book-info{
-    /* max-width: 90%; */
+    margin-left: 0px;
+    width: 90%;
     font-size: 1rem;
     /* overflow: hidden; */
   }
@@ -901,8 +865,12 @@ textarea {
   display: flex;
   flex-direction: row; 
 }
-.book-details .book{
-  max-width: 80vw;
+.book-details .container{
+  max-width: 90%;
+}
+.book-details .card.book{
+  /* width: 100%; */
+  margin: auto;
 }
 .book-info p{
   margin-top: 5px;
@@ -914,6 +882,13 @@ textarea {
 .book-info div{
   text-indent: 25px;
 }
+
+@media (max-width: 760px) {
+  .book-details .container{
+    max-width: 100%;
+  }
+}
+
 /* СТОРІНКА КОРИСТУВАЧА */
 .container.user_page{
   display: grid;
