@@ -32,14 +32,14 @@ darkbtn.addEventListener("click", () => {
 
 //Пошук
 function search(){
-  document.body.classList.toggle('open')
+  document.body.classList.toggle('open') 
   document.getElementsByClassName('search-form')[0].classList.toggle('open')
 }
 
 //Бургер-меню
 function burgerMenu(){
   document.getElementById("main-menu").classList.toggle("open");
-  document.body.classList.toggle('open')
+  // document.body.classList.toggle('open')
 }
 
 //Календар

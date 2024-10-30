@@ -104,7 +104,7 @@ ul {
 /*Панель навігації*/
 nav {
   background-color: var(--jonquil);
-  padding: 20px;
+  padding: 0 20px;
   font-size: 1.3em;
 }
 
@@ -113,8 +113,9 @@ nav #logo-big{
 }
 
 nav .container{
-  margin: auto;
+  margin: 0;
 }
+
 nav .nav-wrapper {
   max-width: 1100px;
   display: flex;
@@ -143,6 +144,17 @@ nav .nav-wrapper {
 }
 .search-form.open{
   visibility: visible;
+}
+.search-form.open #close-search{
+  position: absolute;
+  font-size: 3rem;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: white;
+}
+.search-form input[type='text']{
+  width: 500px;
 }
 /**/
 
@@ -186,6 +198,10 @@ nav .nav-wrapper {
   display: inline;
 }
 
+.bottom-bar{
+  display: none;
+}
+
 .darkmode input {
   display: none;
 }
@@ -196,37 +212,30 @@ nav .nav-wrapper {
 }
 
 @media (max-width: 1024px){
-  .main-menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 75px;
-    width: 100vw;
-    transition: .5s;
-    font-size: 1.5em;
+  .bottom-bar{
+    display: block;
+    background-color: var(--jonquil);
     position: fixed;
     bottom: 0;
-    overflow: hidden ;
+    width: 100vw;
+    height: 50px;
   }
-  
-  .main-menu ul{
-    height: 100%;
-    padding: 10px;
+  .bottom-bar ul{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main-menu{
+    position: fixed;
+    top:0;
+    height: calc(100vh - 50px);
+    transform: translateX(-80px);
   }
 
   .main-menu.open{
-    width: 100vw;
-    height: 100vh;
+    transform: translateX(0);
     background-color: var(--blue-green);
-  }
-  .main-menu.open ul{
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -800,7 +809,7 @@ textarea {
 
 .book-form input[type='submit'] {
   max-width: 200px;
-  font-size: 1.2rem;
+  font-size: 1.2rem; 
   font-weight: 700;
   cursor: pointer;
 }

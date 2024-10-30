@@ -1,3 +1,23 @@
+<div class="bottom-bar">
+    <ul>
+      <li class="close-menu material-symbols-rounded" id="burger-menu" onclick="burgerMenu()">
+        menu
+    </li>
+      <li class="link">
+            <a href="drawers.php"><span class="material-symbols-rounded">box</span></a>
+        </li>
+        <li class="link">
+            <a href="book_catalog.php"><span class="material-symbols-rounded">book_2</span></a>
+        </li>
+        <li class="link">
+            <a href="entries_page.php"><span class="material-symbols-rounded">newspaper</span> </a>
+        </li>
+      <li class="link">
+            <a href="login-page.php"><span class="material-symbols-rounded">person</span> </a>
+        </li>
+    </ul>
+  </div>
+  
 <aside class="main-menu" id="main-menu">
     <span class="close-menu material-symbols-rounded" id="burger-menu" onclick="burgerMenu()">
         menu
