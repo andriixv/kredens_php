@@ -39,6 +39,12 @@ function search(){
 //Бургер-меню
 function burgerMenu(){
   document.getElementById("main-menu").classList.toggle("open");
+  if (document.getElementById("main-menu").classList.contains('open')){
+    document.getElementById('burger-menu').innerText = 'close';
+  }
+  else{
+    document.getElementById("burger-menu").innerText = 'menu'
+  }
   // document.body.classList.toggle('open')
 }
 

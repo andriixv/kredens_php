@@ -105,7 +105,6 @@ ul {
 nav {
   background-color: var(--jonquil);
   padding: 0 20px;
-  font-size: 1.3em;
 }
 
 nav #logo-big{
@@ -225,6 +224,7 @@ nav .nav-wrapper {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: 2px 10px;
   }
   .main-menu{
     position: fixed;
@@ -236,6 +236,9 @@ nav .nav-wrapper {
   .main-menu.open{
     transform: translateX(0);
     background-color: var(--blue-green);
+  }
+  .close-menu.bottom{
+    background-color: whitesmoke;
   }
 }
 
@@ -345,7 +348,7 @@ nav .nav-wrapper {
 }
 
 img.wide {
-  max-height: 300px;
+  max-height: 400px; /* 300px */
   object-fit: cover;
 }
 
