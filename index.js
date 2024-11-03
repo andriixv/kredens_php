@@ -332,11 +332,9 @@ function showBook() {
    }
 
    function booksGrid(){
-    console.log('yes1')
-    let things = document.querySelectorAll('.book, .book-catalog .container');
+    let things = document.querySelectorAll('.book, .books');
     
     things.forEach((thing) => {
-      console.log('yes');
       thing.classList.toggle('grid');
     })
   }

@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <?php include 'include-head.php';?>
-</head>
-<body>
-    <?php include 'include-navbar.php';?>
-    <?php include 'include-calendar.php';?>
-  
-    <section class="filter-wrapper">
-    <div class="add-filters container">
+<?php include 'include-head.php';?>
+<section class="book-catalog">
+  <section class="filter-wrapper">
+    <div class="add-filters">
       <span onclick="showFilters()" class="material-symbols-rounded filter-button"> filter_alt</span>
-      <a href="add_book.html" class="filter-button"><span class="material-symbols-rounded">add </span>Книга</a>
-      <label class="book-view btn">
+      <a href="add_book.php" class="filter-button"><span class="material-symbols-rounded">add </span>Книга</a>
+      <span class="book-view filter-button">
         <input type="checkbox" onchange="booksGrid()"/>
         <i id="viewIcon" class="fa-regular fa-eye"></i>
-      </label>
+      </span>
       <div class="selected-categories-container">
         <!-- <h2>Selected Categories</h2> -->
         <div class="selected-categories"></div>
@@ -22,7 +15,7 @@
       
     </div>
 
-    <div class="container filter-container">
+    <div class="filter-container">
       <form class="filters">
         <h5>Жанр книги</h5>
         <label><input type="checkbox" class="filter-checkbox" name="vehicle1" value="Фантастика" />
@@ -90,8 +83,8 @@
     </div>
   </section>
 
-  <section class="book-catalog">
-    <div class="container">
+  <section class="books">
+   
       <div class="book card">
         <img class="cover" src='img/gibson_nejromant.webp'></img>
         <div class="book-info">
@@ -122,11 +115,7 @@
       <div class="book card"></div>
       <div class="book card"></div>
       <div class="book card"></div>
-    </div>
+ 
   </section>
-    
-    <?php include 'include-poll.php';?>
-    <?php include 'include-footer.php';?>
-    <script src="index.js"></script>
-</body>
-</html>
+</section>
+<?php include 'include-footer.php';?> 

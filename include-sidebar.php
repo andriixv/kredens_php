@@ -33,7 +33,7 @@
             <a href="entries_page.php"><span class="material-symbols-rounded">newspaper</span> <span class="link-name">Новини</span></a>
         </li>
         <li class="link">
-            <a href="index-map.php"><span class="material-symbols-rounded">crowdsource</span> <span class="link-name">Громади</span></a>
+            <a href="gromady.php"><span class="material-symbols-rounded">crowdsource</span> <span class="link-name">Громади</span></a>
         </li>
         <li class="link">
             <a href="login-page.php"><span class="material-symbols-rounded">person</span> <span class="link-name">Вхід</span></a>

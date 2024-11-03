@@ -81,7 +81,7 @@ body.dark {
 
  main{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 100px auto;
  }
  @media (max-width: 1024px){
   main{
@@ -107,23 +107,45 @@ nav {
   padding: 0 20px;
 }
 
-nav #logo-big{
-  width: 200px;
-}
-
-nav .container{
-  margin: 0;
-}
-
 nav .nav-wrapper {
-  max-width: 1100px;
+  max-width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 10px;
+  padding: 10px;
 }
 
+nav .logo-container{
+  max-height: 120px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.kredens{
+  border-right: 3px solid black;
+}
+.logo{
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.logo img{
+  height: 75%;
+  object-fit: contain;
+}
+.logo span{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+@media (max-width: 1024px){
+  .logo span{
+    visibility: collapse;
+  }
+}
 
 /*Пошук*/
 .search-form{
@@ -163,6 +185,8 @@ nav .nav-wrapper {
   width: 80px;
   transition: .5s;
   font-size: 1.5em;
+  z-index: 2;
+  box-shadow: 5px 5px 5px -5px #888
 }
 .main-menu.open{
   width:350px;
@@ -242,6 +266,20 @@ nav .nav-wrapper {
   }
 }
 
+.main-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+@media (max-width: 1024px){
+  .maina-content{
+    width: auto;
+  }
+}
+
 /* Стрічка анонсів подій
 .announcements-wraper {
   background-color: var(--blue-green);
@@ -311,7 +349,6 @@ nav .nav-wrapper {
 
 .past-events{
   width: max-content;
-  width: calc(100%-80px);
 }
 
 @media (max-width: 1024px){
@@ -547,9 +584,7 @@ footer .contacts a:hover {
   .footer-flex {
     display: flex;
     flex-direction: column;
-
   }
-
 }
 
 
@@ -717,7 +752,7 @@ footer .contacts a:hover {
 
 .filter-button {
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-items: center;
   text-align: center;
@@ -858,13 +893,14 @@ textarea {
 }
 
 /*СТОРІНКА КАТАЛОГУ КНИГ*/
-
-.book-catalog .container{
+.book-catalog{
+  width: 90%;
+}
+.books{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* gap: 20px; */
 }
 .card.book{
   display: flex;
@@ -876,7 +912,7 @@ textarea {
 }
 
 /*Вид книжок в 2 стовпці*/
-.book-view.btn input{
+.book-view.filter-button input{
   display: none;
 }
 .book-view.btn {
@@ -887,7 +923,7 @@ textarea {
     display: none;
    }
 }
-.book-catalog .container.grid{
+.books.grid{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -897,7 +933,6 @@ textarea {
 }
 .card.book.grid{
   display: flex;
-  /* flex-direction: row; */
   width: 40%;
   margin: 10px;
   justify-content: space-between;
@@ -1055,7 +1090,7 @@ textarea {
 
 
 /*СТОРІНКА З МАПОЮ*/
-.ukraine-map{
+/* .ukraine-map{
   display: flex;
   justify-content: center;
 }
@@ -1133,6 +1168,48 @@ justify-content: space-between;
 }
 .modal-header span{
   cursor: pointer;
+} */
+
+/* СТОРІНКА З ГРОМАДАМИ */
+.gromady{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.gromady .gromada{
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 150px;
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+}
+.gromady .gromada:hover, .gromada:active{
+  background-color: #f0c808ff;
+}
+.gromady .gromada img{
+ width: 30%;
+}
+.gromady .gromada span{
+  font-size: 1.5rem;
+}
+@media (max-width: 1024px){
+  .gromady{
+    width: auto;
+    flex-direction: column;
+  }
+  .gromady .gromada{
+    margin: 10px 0;
+  }
 }
 
 /* СТОРІНКА ВХОДУ/РЕЄСТРАЦІЇ */

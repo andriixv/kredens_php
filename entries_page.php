@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <?php include 'include-head.php';?>
-</head>
-<body>
-    <?php include 'include-navbar.php';?>
-    <?php include 'include-calendar.php';?>
-  
+<?php include 'include-head.php';?>
     <section class="past-events">
       <div class="container">
         <div class="section-header">
@@ -82,9 +74,4 @@
         </div>
       </div>
     </section>
-    
-    <?php include 'include-poll.php';?>
-    <?php include 'include-footer.php';?>
-    <script src="index.js"></script>
-</body>
-</html>
+<?php include 'include-footer.php';?> 

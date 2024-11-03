@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <?php include 'include-head.php';?>
-</head>
-<body>
-    <?php include 'include-navbar.php';?>
-    <?php include 'include-calendar.php';?>
-  
+<?php include 'include-head.php';?>
     <section class="entry-page">
       <div class="container entry">
         <h1 class="entry-header">Свято Покрови Пресвятої Богородиці</h1>
@@ -110,10 +102,4 @@
         </div>
       </div>
     </section>
-    
-    <?php include 'include-poll.php';?>
-    <?php include 'include-footer.php';?>
-    <script src='slider.js'></script>
-    <script src="index.js"></script>
-</body>
-</html>
+<?php include 'include-footer.php';?> 

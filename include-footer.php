@@ -1,4 +1,8 @@
-<footer>
+</section>
+
+</main>
+    <?php include 'include-poll.php';?>
+    <footer>
       <div class="container">
         <div class="footer-flex">
           <div class="contacts">
@@ -40,3 +44,6 @@
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
+</body>
+</html>
