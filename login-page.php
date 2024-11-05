@@ -1,4 +1,4 @@
-<?php include 'include-head.php';?> 
+<?php include 'includes/include-head.php';?> 
     <section class="login-signup">
             <div class="form-container login">
                     <h1>Вхід</h1>
@@ -17,4 +17,4 @@
             </div>
             
     </section>
-<?php include 'include-footer.php';?> 
+<?php include 'includes/include-footer.php';?> 

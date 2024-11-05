@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 <body>
-    <?php include 'include-navbar.php';?>
+    <?php include 'includes/include-navbar.php';?>
     <!-- <//?php include 'include-calendar.php';?> -->
     <main>
-    <?php include 'include-sidebar.php';?>
+    <?php include 'includes/include-sidebar.php';?>
 <section class="main-content">
 

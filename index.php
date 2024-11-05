@@ -1,4 +1,4 @@
-<?php include 'include-head.php';?>   
+<?php include 'includes/include-head.php';?>   
     <section class="past-events">
       <div class="container">
         <div class="section-header">
@@ -78,4 +78,4 @@
         </div>
       </div>
     </section>
-<?php include 'include-footer.php';?> 
+<?php include 'includes/include-footer.php';?> 

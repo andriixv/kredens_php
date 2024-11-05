@@ -1,4 +1,4 @@
-<?php include 'include-head.php';?>
+<?php include 'includes/include-head.php';?>
 <section class="book-catalog">
   <section class="filter-wrapper">
     <div class="add-filters">
@@ -118,4 +118,4 @@
  
   </section>
 </section>
-<?php include 'include-footer.php';?> 
+<?php include 'includes/include-footer.php';?> 

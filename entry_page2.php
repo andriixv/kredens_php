@@ -1,4 +1,4 @@
-<?php include 'include-head.php';?>
+<?php include 'includes/include-head.php';?>
     <section class="entry-page">
       <div class="container entry">
         <h1 class="entry-header">Фестиваль пончиків у Світязі</h1>
@@ -26,4 +26,4 @@
        
       </div>
     </section>
-<?php include 'include-footer.php';?> 
+<?php include 'includes/include-footer.php';?> 

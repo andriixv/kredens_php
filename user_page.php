@@ -1,4 +1,4 @@
-<?php include 'include-head.php';?>
+<?php include 'includes/include-head.php';?>
 
   
     <section>
@@ -36,4 +36,4 @@
 
     </div>
   </section>
-<?php include 'include-footer.php';?> 
+<?php include 'includes/include-footer.php';?> 
