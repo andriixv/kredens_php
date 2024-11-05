@@ -109,6 +109,7 @@ ul {
 nav {
   background-color: var(--jonquil);
   padding: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);;
 }
 
 nav .nav-wrapper {
@@ -120,7 +121,7 @@ nav .nav-wrapper {
 }
 
 nav .logo-container{
-  max-height: 120px;
+  max-height: 80px;
   max-width: 400px;
   display: flex;
   flex-direction: row;
@@ -136,7 +137,7 @@ nav .logo-container{
   align-items: center;
 }
 .logo img{
-  height: 75%;
+  height: 100%;
   object-fit: contain;
 }
 .logo span{
@@ -146,6 +147,13 @@ nav .logo-container{
 }
 
 @media (max-width: 1024px){
+  nav .logo-container{
+    max-height: 55px;
+    max-width: 150px;
+  }
+  nav .logo{
+    padding: 0;
+  }
   .logo span{
     visibility: collapse;
   }

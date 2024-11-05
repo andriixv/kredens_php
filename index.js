@@ -333,7 +333,7 @@ function showBook() {
 
    function booksGrid(){
     let things = document.querySelectorAll('.book, .books');
-    
+    console.log('ok')
     things.forEach((thing) => {
       thing.classList.toggle('grid');
     })

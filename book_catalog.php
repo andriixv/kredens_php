@@ -4,10 +4,10 @@
     <div class="add-filters">
       <span onclick="showFilters()" class="material-symbols-rounded filter-button"> filter_alt</span>
       <a href="add_book.php" class="filter-button"><span class="material-symbols-rounded">add </span>Книга</a>
-      <span class="book-view filter-button">
-        <input type="checkbox" onchange="booksGrid()"/>
+      <label class="book-view filter-button">
+        <input type="checkbox" onclick="booksGrid()"/>
         <i id="viewIcon" class="fa-regular fa-eye"></i>
-      </span>
+      </label>
       <div class="selected-categories-container">
         <!-- <h2>Selected Categories</h2> -->
         <div class="selected-categories"></div>
